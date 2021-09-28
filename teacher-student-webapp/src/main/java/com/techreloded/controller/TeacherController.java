@@ -177,7 +177,7 @@ public class TeacherController {
 			response.put(AppConstant.DATA, null);
 			response.put(AppConstant.IS_SUCCESS, false);
 			response.put(AppConstant.MESSAGE, "Something went wrong !");
-			response.put(AppConstant.STATUS_CODE, HttpStatus.OK);
+			response.put(AppConstant.STATUS_CODE, HttpStatus.BAD_GATEWAY);
 		}
 		return response;		
 	}
@@ -392,7 +392,7 @@ public class TeacherController {
 			response.put(AppConstant.DATA, null);
 			response.put(AppConstant.IS_SUCCESS, false);
 			response.put(AppConstant.MESSAGE, "Something went wrong !");
-			response.put(AppConstant.STATUS_CODE, HttpStatus.OK);
+			response.put(AppConstant.STATUS_CODE, HttpStatus.BAD_GATEWAY);
 		}
 		return response;		
 	}

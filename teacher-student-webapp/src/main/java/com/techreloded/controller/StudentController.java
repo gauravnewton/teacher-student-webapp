@@ -100,7 +100,7 @@ public class StudentController {
 			response.put(AppConstant.DATA, null);
 			response.put(AppConstant.IS_SUCCESS, false);
 			response.put(AppConstant.MESSAGE, "Something went wrong !");
-			response.put(AppConstant.STATUS_CODE, HttpStatus.OK);
+			response.put(AppConstant.STATUS_CODE, HttpStatus.BAD_GATEWAY);
 		}
 		return response;		
 	}
@@ -154,6 +154,12 @@ public class StudentController {
 		return response;		
 	}
 	
+	/**
+	 * Dash board.
+	 *
+	 * @param request the request
+	 * @return the model and view
+	 */
 	@GetMapping(value = "/dashboard")
 	public ModelAndView dashBoard(HttpServletRequest request) {
 		ModelAndView modelAndView = new ModelAndView("student/dashboard");
@@ -166,6 +172,12 @@ public class StudentController {
 	}
 	
 	
+	/**
+	 * Profile.
+	 *
+	 * @param request the request
+	 * @return the model and view
+	 */
 	@GetMapping(value = "/profile")
 	public ModelAndView profile(HttpServletRequest request) {
 		ModelAndView modelAndView = new ModelAndView("student/profile");
@@ -178,6 +190,12 @@ public class StudentController {
 	}
 	
 
+	/**
+	 * My courses.
+	 *
+	 * @param request the request
+	 * @return the model and view
+	 */
 	@GetMapping(value = "/myCourses")
 	public ModelAndView myCourses(HttpServletRequest request) {
 		ModelAndView modelAndView = new ModelAndView("student/myCourse");
